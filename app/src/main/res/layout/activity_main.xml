@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:opencv="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:background="@android:color/white"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/layout">
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <org.opencv.android.JavaCameraView
+            android:id="@+id/HelloOpenCvView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone"
+            opencv:camera_id="any"
+            opencv:show_fps="true" />
+
+
+
+        <TextView
+            android:id="@+id/label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:textColor="@android:color/black"
+            android:text="Scan number below!"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_marginBottom="0dp"
+            android:textAlignment="center"
+            android:background="#ffffff"
+            />
+
+    </FrameLayout>
+
+    <Button android:text="Capture" android:id="@+id/capture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimary"
+        android:elevation="8dp"
+        android:onClick="captureTapped"
+        >
+
+    </Button>
+</RelativeLayout>
